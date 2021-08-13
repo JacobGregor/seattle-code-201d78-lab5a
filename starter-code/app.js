@@ -54,11 +54,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 // you get back an array from sum!!!
+let add = sum(sum(a,c)[0],(sum(b,0)[0]))[0];
+let multiply1 = multiply(multiply(a,b)[0],multiply(c,1)[0])[0];
+let string1 = a + ' and ' + b + ' and ' + c + ' sum to ' + add + '.';
+let string2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply1 + '.';
+return [add,multiply1,string1,string2]
+
 // make sure your get the correct index number to get the number from sum
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
